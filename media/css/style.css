@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --mainColor: #672779;
+    --gray: #636b72;
+  }
+
+
+*, :before, :after {
+    box-sizing: border-box;
+    }
+
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainColor);
+}
+
+input[type=text],input[type=password]{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    line-height: 1.2;
+    height: 50px;
+    display: block;
+    padding: 5px;
+    font-size: 1.4em;
+}
+
+input[type="password"] {
+    letter-spacing: 0.3em;
+    }
+
+.form-Content{
+    width: 400px;
+    transition: 700ms ease all;
+}
+    .form-Content h1{
+        text-align: center;
+        margin: 15px 0;
+        font-size: 2.6em;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .form-Content form{
+        transition: 700ms ease all;
+        opacity: 1;
+        width: 100%;
+    }
+.tex-field{
+    margin: 2em 1em;
+    position: relative;
+    border-bottom: solid 2px #ccc;
+}
+
+.tex-field label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    height: calc(100% + 2px);
+    width: 100%;
+    display: block;
+}
+
+.tex-field label::after{
+    position: absolute;
+    content: attr(aria-placeholder);
+    color: var(--gray);
+    left: 0;
+    top: 25px;
+    font-size: 16psx;
+    font-weight: normal;
+    pointer-events: none;
+    transition: 300ms ease all;
+    font-size: 1.2em;
+}
+
+.tex-field input:focus ~ label::after,.tex-field input:valid ~ label::after{
+    top: -18px;
+    font-size: 1rem;
+}
+
+.tex-field label::before{
+    content: '';
+    height: 2px;
+    bottom: -2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: var(--mainColor);
+    display: block;
+    transition: 300ms ease all;
+}
+
+
+.tex-field input:focus ~ label::before,.tex-field input:valid ~ label::before{
+    width:100%;
+}
+
+.btn{
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    width: 90%;
+    text-align: center;
+    margin: 3.2em auto 0;
+    display: block;
+    background: var(--mainColor);
+    color: #fff;
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.options{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 2.5em 1em 0;
+}
+
+.icon-login{
+    height: 130px;
+    width: auto;
+    display: block;
+    margin: 3.2em auto 0;
+    border: solid 4px var(--mainColor);
+    padding: 18px;
+    border-radius: 100px;
+}
+
+.hide{
+    overflow: hidden;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0;
+}
