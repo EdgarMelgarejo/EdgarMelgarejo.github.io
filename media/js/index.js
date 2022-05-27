@@ -54,7 +54,7 @@ loginSuccess= (data)=>{
     if(data && data.isValid==1){
         //redirect
         var vtx= "https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx";
-        vtx+="&state="+state;
+        vtx+="?state="+state;
         vtx+="&codeAuth="+data.codeAuth;
         window.location.replace(vtx);
     }else{
