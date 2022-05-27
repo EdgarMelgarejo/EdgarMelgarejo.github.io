@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDC IdP</title>
+    <title>Vtex CDC</title>
+    <link rel="stylesheet" href="media/css/style.css">
+    <link rel="icon" crossorigin href="media/image/favicon-32x32.png" type="image/png">
+    <script>
+        document.cookie = 'cross-site-cookie=bar; SameSite=Strict;';
+    </script>
 </head>
 <body>
-    
+    <div class="form-Content">
+        <h1>Welcome</h1>
+        
+        <img class="icon-login" src="media/image/cyzone-bic-woman.svg" >
+        
+        <form id="frmLogin" action="javascript:void(0);">
+            <div class="tex-field">
+                <input type="text"  required name="email">
+                <label for="" aria-placeholder="Email"></label>
+            </div>
+            <div class="tex-field">
+                <input type="password" required name="password">
+                <label for="" aria-placeholder="Password"></label>
+            </div>
+            <input type="submit" value="Login" class="btn" action="login">
+            <div class="options">
+                <a href="#" class="lnkForm" form="frmForgot">Forgot password</a>
+                <a href="#" class="lnkForm" form="frmRegister">Signup</a>
+            </div>
+        </form>
+
+        <form id="frmForgot" class="hide" action="javascript:void(0);">
+            <div class="tex-field">
+                <input type="text"  required name="email">
+                <label for="" aria-placeholder="Email"></label>
+            </div>
+            <input type="submit" value="Reset password" class="btn" action="forgot">
+            <div class="options">
+                <a href="#" class="lnkForm" form="frmLogin">Login</a>
+                <a href="#" class="lnkForm" form="frmRegister">Signup</a>
+            </div>
+        </form>
+
+        <form id="frmRegister" class="hide" action="javascript:void(0);">
+            <div class="tex-field">
+                <input type="text"  required name="email">
+                <label for="" aria-placeholder="Email"></label>
+            </div>
+            <div class="tex-field">
+                <input type="text"  required name="firstName">
+                <label for="" aria-placeholder="First name"></label>
+            </div>
+            <div class="tex-field">
+                <input type="text"  required name="lastName">
+                <label for="" aria-placeholder="Last name"></label>
+            </div>
+            <div class="tex-field">
+                <input type="password" required name="password">
+                <label for="" aria-placeholder="Password"></label>
+            </div>
+            <input type="submit" value="Register" class="btn" action="register">
+            <div class="options">
+                <a href="#" class="lnkForm" form="frmForgot">Forgot password</a>
+                <a href="#" class="lnkForm" form="frmLogin">Login</a>
+            </div>
+        </form>
+    </div>
+<script src="media/js/index.js"></script>
 </body>
 </html>
