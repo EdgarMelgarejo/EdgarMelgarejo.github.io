@@ -53,7 +53,7 @@ loginSuccess= (data)=>{
     alert(JSON.stringify(data))
     if(data && data.isValid==1){
         //redirect
-        const vtx= "https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx";
+        var vtx= "https://vtexid.vtex.com.br/VtexIdAuthSiteKnockout/ReceiveAuthorizationCode.ashx";
         vtx+="&state="+state;
         vtx+="&codeAuth="+data.codeAuth;
         window.location.replace(vtx);
