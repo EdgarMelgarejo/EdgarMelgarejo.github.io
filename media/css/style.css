@@ -22,7 +22,7 @@ html{
 body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,6 +53,7 @@ input[type="password"] {
 .form-Content{
     width: 400px;
     transition: 700ms ease all;
+    margin-bottom: 30px;
 }
     .form-Content h1{
         text-align: center;
